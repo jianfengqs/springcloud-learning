@@ -72,9 +72,3 @@ springcloud-learning
 ├── micro-oauth2 -- Gateway + Oauth2 实现统一认证和鉴权
 └── micro-knife4j -- Gateway + Knife4j聚合API文档
 ```
-
-## 公众号
-
-mall项目全套学习教程连载中，**关注公众号**第一时间获取。
-
-![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
