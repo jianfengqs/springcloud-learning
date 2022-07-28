@@ -1,14 +1,127 @@
 package com.qa.array;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Test {
 
     public static void main(String[] args) {
-        ;
 
-        System.out.println(minSubArrayLen(new int[]{2, 3, 1, 2, 4, 3}, 7));
+//        System.out.println(minSubArrayLen(new int[]{2, 3, 1, 2, 4, 3}, 7));
+
+        // 两数之和
+//        System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 13)));
+
+        // 53. 最大子序和
+//        System.out.println(maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+
+        // 415. 字符串相加
+        System.out.println(addStrings("123", "99"));
+
+        // 389. 找不同
+//        System.out.println(findTheDifference("abcd", "abcde"));
+
+
     }
+
+    /**
+     * 389. 找不同
+     * <p>
+     * 将字符串 ss 中每个字符的 ASCII 码的值求和
+     *
+     * @param s 旧值
+     * @param t 新值
+     * @return char
+     */
+    public static char findTheDifference(String s, String t) {
+        int as = 0;
+        int at = 0;
+        for (int i = 0; i < s.length(); ++i) {
+            as += s.charAt(i);
+        }
+
+        for (int i = 0; i < t.length(); ++i) {
+            at += t.charAt(i);
+        }
+        return (char) (at - as);
+    }
+
+
+    /**
+     * 415. 字符串相加
+     *
+     * @param num1 num1
+     * @param num2 num2
+     * @return {@link String}
+     */
+    public static String addStrings(String num1, String num2) {
+
+        StringBuilder res = new StringBuilder();
+        int i = num1.length() - 1;
+        int j = num2.length() - 1;
+        int carry = 0;
+
+        while (i >= 0 || j >= 0) {
+            int n1 = i >= 0 ? num1.charAt(i) - '0' : 0;
+            int n2 = j >= 0 ? num2.charAt(j) - '0' : 0;
+
+
+            int tmp = n1 + n2 + carry;
+            carry = tmp / 10;
+            res.append(tmp % 10);
+            i--;
+            j--;
+        }
+
+        if (carry == 1) {
+            res.append(1);
+        }
+        return res.reverse().toString();
+    }
+
+
+    /**
+     * 53. 最大子序和
+     *
+     * @param nums 数组
+     * @return int
+     */
+    public static int maxSubArray(int[] nums) {
+        int ans = nums[0];
+        int sum = 0;
+        for (int num : nums) {
+            if (sum > num) {
+                sum += num;
+            } else {
+                sum = num;
+            }
+            ans = Math.max(ans, sum);
+        }
+
+        return ans;
+    }
+
+
+    /**
+     * 两数之和
+     *
+     * @param nums   数组
+     * @param target 目标
+     * @return {@link int[]}
+     */
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
+            }
+            map.put(nums[i], i);
+        }
+
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
 
     public static int[] erfen(int[] nums, int target) {
         int left = 0;
