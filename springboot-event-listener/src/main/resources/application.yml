@@ -1,0 +1,9 @@
+server:
+  port: 8099
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cop_data_transform
+    username: root
+    password: 12345678
