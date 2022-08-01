@@ -191,7 +191,7 @@ public class MyBatisGenerate {
                 // BaseRepository impl
 //                .superServiceClass(BaseRepository.class)
 //                .superServiceImplClass(BaseRepositoryImpl.class)
-                .formatServiceFileName("%sService")
+                .formatServiceFileName("I%sService")
                 .formatServiceImplFileName("%sServiceImpl")
                 // 配置mapper策略
                 .mapperBuilder()
@@ -238,7 +238,7 @@ class TestGenerate {
                 .dbHostAndPort("127.0.0.1:3306")
                 .dbUserName("root")
                 .dbPsw("12345678")
-                .tables(new String[]{"msg_fail_log"})
+                .tables(new String[]{"vc_asin_sku"})
                 .author("zhaijianfeng")
                 .build()
                 .generate();
