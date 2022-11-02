@@ -12,10 +12,10 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   redis:
-    database: 15
+    database: 18
     port: 6379
-    host: 47.98.252.163
-    password: GMadmins1318#
+    host: 101.132.25.75
+    password: vevor123456
 management:
   endpoints:
     web:

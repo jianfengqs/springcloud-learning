@@ -33,10 +33,10 @@ spring:
         jwt:
           jwk-set-uri: 'http://localhost:9401/rsa/publicKey' #配置RSA的公钥访问地址
   redis:
-    database: 15
+    database: 18
     port: 6379
-    host: 47.98.252.163
-    password: GMadmins1318#
+    host: 101.132.25.75
+    password: vevor123456
 secure:
   ignore:
     urls: #配置白名单路径
