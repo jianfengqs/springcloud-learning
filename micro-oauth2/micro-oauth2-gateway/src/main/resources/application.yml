@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8849
+        server-addr: 127.0.0.1:8848
     gateway:
       routes: #配置路由路径
         - id: oauth2-api-route
@@ -42,3 +42,8 @@ secure:
     urls: #配置白名单路径
       - "/actuator/**"
       - "/auth/oauth/token"
+
+logging:
+  file:
+    path: /Users/qingshan/software/IdeaProjects/springcloud-learning/micro-oauth2/micro-oauth2-gateway
+  config: classpath:logback.xml

@@ -52,6 +52,13 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.macro.cloud</groupId>-->
+<!--            <artifactId>micro-common</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+
     </dependencies>
 
 </project>

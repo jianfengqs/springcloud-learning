@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.macro.cloud.interceptor.FeignHeaderInterceptor,\
+  com.macro.cloud.interceptor.TraceIdInterceptor

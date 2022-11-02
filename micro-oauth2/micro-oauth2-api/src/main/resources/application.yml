@@ -8,9 +8,15 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8849
+        server-addr: 127.0.0.1:8848
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+
+logging:
+  file:
+    path: /Users/qingshan/software/IdeaProjects/springcloud-learning/micro-oauth2/micro-oauth2-api
+  config: classpath:logback.xml
