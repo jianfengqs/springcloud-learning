@@ -56,6 +56,7 @@ public class ObserverPattern {
                 observer.update(message);
 
 
+
             }
         }
     }
