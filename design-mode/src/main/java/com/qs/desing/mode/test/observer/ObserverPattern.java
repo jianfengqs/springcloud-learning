@@ -54,6 +54,8 @@ public class ObserverPattern {
         public void notify(String message) {
             for (Observer observer : list) {
                 observer.update(message);
+
+
             }
         }
     }
